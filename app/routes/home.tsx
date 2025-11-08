@@ -1,4 +1,3 @@
-import React from "react";
 import type { Route } from "./+types/home";
 import NavBar from "~/components/navbar";
 import { KanaDisplay } from "~/components/KanaDisplay";
@@ -6,7 +5,6 @@ import { OptionsGrid } from "~/components/OptionsGrid";
 import { InfoSection } from "~/components/InfoSection";
 import { useKanaGame } from "~/hooks/useKanaGame";
 import { MOD, TYPE } from "~/hooks/useNavbar";
-import { HashRouter } from "react-router";
 
 export function meta(_: Route.MetaArgs) {
   return [
@@ -62,39 +60,37 @@ export default function Home() {
   });
 
   return (
-    <HashRouter basename="/spam-kana">
-      <div className="container m-auto max-md:h-screen w-screen max-w-md overflow-x-hidden overflow-y-auto flex flex-col gap-3 p-3">
-        <NavBar
-          row={row}
-          setRow={setRow}
-          mod={mod}
-          setMod={setMod}
-          scriptType={scriptType}
-          setScriptType={setScriptType}
-        />
+    <div className="container m-auto max-md:h-screen w-screen max-w-md overflow-x-hidden overflow-y-auto flex flex-col gap-3 p-3">
+      <NavBar
+        row={row}
+        setRow={setRow}
+        mod={mod}
+        setMod={setMod}
+        scriptType={scriptType}
+        setScriptType={setScriptType}
+      />
 
-        <KanaDisplay
-          current={current}
-          showRomaji={showRomaji}
-          setShowRomaji={setShowRomaji}
-          correctCount={correctCount}
-          wrongCount={wrongCount}
-          displayRate={displayRate}
-          rawRate={rawRate}
-          canEvaluate={canEvaluate}
-          onShuffle={shuffleIndex}
-          onReset={resetStats}
-          groupKana={groupKana}
-        />
+      <KanaDisplay
+        current={current}
+        showRomaji={showRomaji}
+        setShowRomaji={setShowRomaji}
+        correctCount={correctCount}
+        wrongCount={wrongCount}
+        displayRate={displayRate}
+        rawRate={rawRate}
+        canEvaluate={canEvaluate}
+        onShuffle={shuffleIndex}
+        onReset={resetStats}
+        groupKana={groupKana}
+      />
 
-        <OptionsGrid
-          groupKana={groupKana}
-          current={current}
-          onOptionClick={handleOptionClick}
-        />
+      <OptionsGrid
+        groupKana={groupKana}
+        current={current}
+        onOptionClick={handleOptionClick}
+      />
 
-        <InfoSection />
-      </div>
-    </HashRouter>
+      <InfoSection />
+    </div>
   );
 }
