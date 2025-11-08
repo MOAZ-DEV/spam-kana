@@ -1,7 +1,7 @@
 import { jsx, jsxs } from "react/jsx-runtime";
 import { PassThrough } from "node:stream";
 import { createReadableStreamFromReadable } from "@react-router/node";
-import { ServerRouter, UNSAFE_withComponentProps, Outlet, UNSAFE_withErrorBoundaryProps, isRouteErrorResponse, Meta, Links, ScrollRestoration, Scripts, BrowserRouter } from "react-router";
+import { ServerRouter, UNSAFE_withComponentProps, Outlet, UNSAFE_withErrorBoundaryProps, isRouteErrorResponse, Meta, Links, ScrollRestoration, Scripts, HashRouter } from "react-router";
 import { isbot } from "isbot";
 import { renderToPipeableStream } from "react-dom/server";
 import { useState, useRef, useMemo, useEffect, useCallback } from "react";
@@ -961,7 +961,7 @@ const home = UNSAFE_withComponentProps(function Home() {
     initialMod: MOD[0],
     initialScriptType: TYPE[0]
   });
-  return /* @__PURE__ */ jsx(BrowserRouter, {
+  return /* @__PURE__ */ jsx(HashRouter, {
     basename: "/spam-kana/",
     children: /* @__PURE__ */ jsxs("div", {
       className: "container m-auto max-md:h-screen w-screen max-w-md overflow-x-hidden overflow-y-auto flex flex-col gap-3 p-3",
@@ -997,7 +997,7 @@ const route1 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProper
   default: home,
   meta
 }, Symbol.toStringTag, { value: "Module" }));
-const serverManifest = { "entry": { "module": "/spam-kana/assets/entry.client-jpD6_M1M.js", "imports": ["/spam-kana/assets/chunk-UIGDSWPH-BCcAQQwV.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/spam-kana/assets/root-BiEzPt4C.js", "imports": ["/spam-kana/assets/chunk-UIGDSWPH-BCcAQQwV.js"], "css": ["/spam-kana/assets/root-Da_ATplB.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home": { "id": "routes/home", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/spam-kana/assets/home-BwgrkK2x.js", "imports": ["/spam-kana/assets/chunk-UIGDSWPH-BCcAQQwV.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/spam-kana/assets/manifest-8e6b73a3.js", "version": "8e6b73a3", "sri": void 0 };
+const serverManifest = { "entry": { "module": "/spam-kana/assets/entry.client-BYeAGM77.js", "imports": ["/spam-kana/assets/chunk-UIGDSWPH-BJWk_C1B.js"], "css": [] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": true, "module": "/spam-kana/assets/root-C8l8uqPG.js", "imports": ["/spam-kana/assets/chunk-UIGDSWPH-BJWk_C1B.js"], "css": ["/spam-kana/assets/root-Da_ATplB.css"], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 }, "routes/home": { "id": "routes/home", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "hasAction": false, "hasLoader": false, "hasClientAction": false, "hasClientLoader": false, "hasClientMiddleware": false, "hasErrorBoundary": false, "module": "/spam-kana/assets/home-DvDNPNJH.js", "imports": ["/spam-kana/assets/chunk-UIGDSWPH-BJWk_C1B.js"], "css": [], "clientActionModule": void 0, "clientLoaderModule": void 0, "clientMiddlewareModule": void 0, "hydrateFallbackModule": void 0 } }, "url": "/spam-kana/assets/manifest-6a15d526.js", "version": "6a15d526", "sri": void 0 };
 const assetsBuildDirectory = "build\\client";
 const basename = "/";
 const future = { "v8_middleware": false, "unstable_optimizeDeps": false, "unstable_splitRouteModules": false, "unstable_subResourceIntegrity": false, "unstable_viteEnvironmentApi": false };
