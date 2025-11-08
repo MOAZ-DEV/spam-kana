@@ -62,7 +62,7 @@ export default function Home() {
   });
 
   return (
-    <HashRouter basename="spam-kana">
+    <HashRouter basename="/spam-kana">
       <div className="container m-auto max-md:h-screen w-screen max-w-md overflow-x-hidden overflow-y-auto flex flex-col gap-3 p-3">
         <NavBar
           row={row}
